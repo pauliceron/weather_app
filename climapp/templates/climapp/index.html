@@ -1,0 +1,31 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <meta name="author" content="author" />
+    <meta name="description" content="description"/>
+    <meta name="keywords" content="keywords" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" />
+    
+  </head>
+  <body>
+    <h1>Weather</h1>
+    <div class="forms">
+        <form method='POST'>{% csrf_token %}
+            <input type="text" placeholder="Enter city" name="city"/>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <div class="time">@{{time}}</div>
+    <div class="city">City: {{city}}</div>
+    <img src ='http://openweathermap.org/img/w/{{icon}}.png' width="100px" /> 
+    <div class="temp">{{temp}} °C</div>
+    <div class="country">Country: {{country}}</div> 
+    <div class="hum">Humidity: {{humidity}}%</div> 
+    <div class="desc">Weather description: {{description}}</div> 
+  
+  </body>
+</html>

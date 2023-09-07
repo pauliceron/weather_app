@@ -1,0 +1,80 @@
+body{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(50px, auto);
+
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 15%;
+    margin-right: 15%;
+
+    background-color: rgb(51, 63, 101);
+    color: white;
+    font-family:Arial, sans-serif;
+
+}
+
+h1{
+    color: rgb(205, 205, 212);
+    font-size: 50px;
+    justify-self: center;
+
+    grid-column: 1/4;
+    grid-row: 1;
+}
+
+.forms{
+    grid-column: 1/4;
+    grid-row: 2;    
+    justify-self: center
+}
+
+button{
+    background-color: #b243ee;
+}
+
+.time{
+    color: black;
+    grid-column: 1/4;
+    grid-row : 3;
+}
+
+.city{
+    font-size: 30px;
+    grid-column: 1/2;
+    grid-row : 4/5;
+    justify-content:baseline;
+}
+
+img{
+   grid-column: 3;
+   grid-row: 4; 
+
+}
+
+.temp{
+    grid-column: 3;
+    grid-row: 5;
+    font-size: 20px;
+ 
+}
+
+.country{
+    grid-column: 1;
+    grid-row: 6;
+}
+
+.hum{
+    grid-column: 3;
+    grid-row: 6;
+}
+
+.desc{
+    grid-column: 1/4;
+    grid-row: 7;
+}
+
+
